@@ -1,0 +1,47 @@
+"""An RFC-3339 compliant DateTime Scalar"""
+scalar DateTime
+
+"""
+A country as defined in ISO-3166-1-alpha2 (e.g. US) or a country subdivision as defined in ISO 3166-2 (e.g. US-NJ).
+"""
+scalar LicensedTerritory
+
+enum LotteryId {
+  Cash4Life
+  Cash5
+  MegaMillions
+  Pick3
+  Pick4
+  Pick6
+  PowerBall
+}
+
+type Query {
+  drawHistory(filter: DrawResultsFilterInput, licensedTerritory: String!, limit: Int!, offset: Int!): DrawHistoryPayload!
+}
+
+input DrawResultsFilterInput {
+  lotteries: [LotteryId!]
+}
+
+type DrawHistoryPayload {
+  draws: [FinishedDrawPayload!]!
+}
+
+type FinishedDrawPayload {
+  addOns: [String!]!
+  drawDate: DateTime!
+  drawnNumbers: [DrawnNumbers!]!
+  id: String!
+  lotteryId: LotteryId!
+}
+
+type DrawnNumbers {
+  numbers: [Numbers!]!
+}
+
+type Numbers {
+  """Matches lottery numbers name like 'MAIN' or 'EXTRA'"""
+  name: String!
+  values: [Int!]!
+}
