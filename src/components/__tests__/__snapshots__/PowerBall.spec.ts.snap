@@ -1,0 +1,85 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PowerBall > renders properly 1`] = `
+<div
+  class="container mx-auto p-4"
+>
+  <ul
+    class="list-none text-white text-lg"
+  >
+    
+    <li
+      class="mb-3"
+      data-test-id="draw-date-0"
+    >
+      Die Powerball zahlen vom: 26.03.2023 
+      
+      <div
+        class="space-x-2 text-white pt-2 text-lg"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        
+        <div
+          class="bg-emerald-600 h-10 w-10 rounded-full text-center inline-block"
+        >
+          <span
+            class="align-center"
+          >
+            15
+          </span>
+        </div>
+        <div
+          class="bg-emerald-600 h-10 w-10 rounded-full text-center inline-block"
+        >
+          <span
+            class="align-center"
+          >
+            17
+          </span>
+        </div>
+        <div
+          class="bg-emerald-600 h-10 w-10 rounded-full text-center inline-block"
+        >
+          <span
+            class="align-center"
+          >
+            18
+          </span>
+        </div>
+        <div
+          class="bg-emerald-600 h-10 w-10 rounded-full text-center inline-block"
+        >
+          <span
+            class="align-center"
+          >
+            47
+          </span>
+        </div>
+        <div
+          class="bg-emerald-600 h-10 w-10 rounded-full text-center inline-block"
+        >
+          <span
+            class="align-center"
+          >
+            57
+          </span>
+        </div>
+        
+      </div>
+      
+    </li>
+    
+  </ul>
+</div>
+`;
+
+exports[`PowerBall > should show loading message when query is still loading 1`] = `
+<div
+  class="container mx-auto p-4"
+>
+  
+  Powerball Daten werden aktualisiert!
+  
+</div>
+`;
